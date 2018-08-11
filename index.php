@@ -4,8 +4,42 @@ define('PSCR_LIB_ROOT', './');
 
 define('PSCR_PROJECT_ROOT', './');
 
-
 require_once('vendor/autoload.php');
+
+function http_request_handler() {
+    $response = "";
+    try {
+        $response = \pscr\lib\router\router::_()
+                  ->get_route($_SERVER['REQUEST_URI'])
+                  ->get_renderer()
+                  ->render_to_response();
+    }
+    catch(\pscr\lib\exceptions\route_not_found_exception $ex) {
+        \pscr\lib\logging\logger::_()->error("page not found exception ", $ex);
+        $response = \pscr\lib\router\router::_()
+                  ->get_route('/404')
+                  ->get_renderer()
+                  ->render_to_response();
+    }
+    catch(\pscr\lib\exceptions\pscr_exception $ex) {
+        \pscr\lib\logging\logger::_()->error("caught pscr exception ", $ex);
+        $response = \pscr\lib\router\router::_()
+                  ->get_route('/500')
+                  ->get_renderer()
+                  ->render_to_response();
+    }
+    catch(Exception $ex) {
+        \pscr\lib\logging\logger::_()->error("caught general exception ", $ex);
+        $response = \pscr\lib\router\router::_()
+                  ->get_route('/500')
+                  ->get_renderer()
+                  ->render_to_response();
+    }
+    finally {
+        if(is_object($response))
+            $response->send_to_client();
+    }
+}
 
 \pscr\lib\logging\logger::_()->info("-----------------------------------------new request------------------------------------------", isset($_SERVER['REQUEST_URI']))
     ? $_SERVER['REQUEST_URI']
