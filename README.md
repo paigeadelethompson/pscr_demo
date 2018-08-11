@@ -1,4 +1,3 @@
-
 # Screenshot
 ![alt text](https://github.com/netcrave/pscr/raw/master/screenshots/1.png "screenshot")
 
@@ -14,6 +13,31 @@ Features
     * Extensible classes (interfaces, abstracts)
     * consistently namespaced hierarchy (namespaces are consistent with files/directories for easier auto-inclusion.)
     * Easy to use global logging class (singleton)
+
+## Installation 
+- fork this reository
+- clone the fork 
+`cd pscr_base && composer install && sudo mkfifo pscr_log && chmod 777 pscr_log`
+
+### Nginx
+```
+server {
+    server_name your.server.name.com;
+    root <path/to/your/pscr_base>;
+    index index.php;
+
+    location / {
+        try_files $uri /index.php?$query_string;
+    }
+
+    location ~ \.php$ {
+        # Test for non-existent scripts or throw a 404 error
+        # Without this line, nginx will blindly send any request ending in .php to php-fpm
+        include /etc/nginx/fastcgi.conf;
+        fastcgi_pass unix:/run/php-fpm.socket;
+    }
+}
+```
 
 ## Making pages is easy with pscr_content
 
