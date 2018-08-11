@@ -2,7 +2,11 @@
     "name": "netcrave/pscr_base",
     "type": "project",
     "require": {
-        "netcrave/pscr_core": "dev-master"
+        "netcrave/pscr_core": "dev-master",
+        "netcrave/pscr_content": "dev-master",
+        "netcrave/pscr_rest_api": "dev-master",
+        "netcrave/pscr_static_loader": "dev-master",
+        "netcrave/pscr_home": "dev-master"
     },
     "repositories": [
     {
@@ -18,6 +22,74 @@
             "autoload": {
                 "psr-4": {
                     "pscr\\lib\\": "lib/"
+                }
+            }
+        }
+    },
+    {
+        "type": "package",
+        "package": {
+            "name": "netcrave/pscr_content",
+            "version": "dev-master",
+            "source": {
+                "url": "https://github.com/netcrave/pscr_content.git",
+                "type": "git",
+                "reference": "master"
+            },
+            "autoload": {
+                "psr-4": {
+                    "pscr\\extensions\\pscr_content\\": "extensions/pscr_content/"
+                }
+            }
+        }
+    },
+    {
+        "type": "package",
+        "package": {
+            "name": "netcrave/pscr_static_loader",
+            "version": "dev-master",
+            "source": {
+                "url": "https://github.com/netcrave/pscr_static_loader.git",
+                "type": "git",
+                "reference": "master"
+            },
+            "autoload": {
+                "psr-4": {
+                    "pscr\\extensions\\static_loader\\": "extensions/static_loader/"
+                }
+            }
+        }
+    },
+    {
+        "type": "package",
+        "package": {
+            "name": "netcrave/pscr_home",
+            "version": "dev-master",
+            "source": {
+                "url": "https://github.com/netcrave/pscr_home.git",
+                "type": "git",
+                "reference": "master"
+            },
+            "autoload": {
+                "psr-4": {
+                    "pscr\\apps\\home\\": "apps/home/"
+                }
+            }
+        }
+    },
+    {
+        "type": "package",
+        "package": {
+            "name": "netcrave/pscr_rest_api",
+            "version": "dev-master",
+            "source": {
+                "url": "https://github.com/netcrave/pscr_rest_api.git",
+                "type": "git",
+                "reference": "master"
+            },
+            "autoload": {
+                "psr-4": {
+                    "pscr\\extensions\\pscr_rest_api\\": "extensions/pscr_rest_api"
                 }
             }
         }
