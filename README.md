@@ -129,3 +129,7 @@ $head->style_tag(<<< 'EOT'
  );
             
 ```
+
+### More examples
+- The [PSCR Home](https://github.com/paigeadelethompson/pscr_home/tree/master/apps/home) module isn't a bad place to start
+- In the [PSCR Content](https://github.com/paigeadelethompson/pscr_content/tree/master/extensions/pscr_content/html) extension you can see what classes are available for use in content modules.
