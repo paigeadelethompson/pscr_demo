@@ -2,7 +2,7 @@
 
 # What is PSCR?
 
-PSCR stands for Prgoressive Solutions Content Renderer; A web development framework written in object oriented PHP. Mainly, this framework features my own content creation extension a native object oriented representation of the Document Object Model for creating web pages from scratch. 
+PSCR stands for Prgoressive Solutions Content Renderer; A web development framework written in object oriented PHP. Mainly, this framework features my own content creation extension a native object oriented representation of an HTML document for creating web pages from scratch. 
 
 ## Why create another web framework?
 
@@ -23,6 +23,7 @@ of object oriented design concepts with what is available in PHP.
 - `php -S 0.0.0.0:80 index.php`
 
 ## How to build a page
+The framework is designed to avoid having to use inline HTML. The `pscr_content` class is a mostly complete representation of what can be accomplished with HTML.
 
 ### create a class and extend pscr\extensions\pscr_content\model\pscr_content:
 
