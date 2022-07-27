@@ -1,5 +1,4 @@
-# Screenshot
-![alt text](https://github.com/paigeadelethompson/pscr_demo/pscr/raw/master/screenshots/1.png "screenshot")
+![screenshot](https://raw.githubusercontent.com/paigeadelethompson/pscr_demo/master/screenshots/1.png "screenshot")
 
 # What is PSCR?
 
