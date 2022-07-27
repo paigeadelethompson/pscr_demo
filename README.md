@@ -1,45 +1,29 @@
 # Screenshot
-![alt text](https://github.com/netcrave/pscr/raw/master/screenshots/1.png "screenshot")
+![alt text](https://github.com/paigeadelethompson/pscr_demo/pscr/raw/master/screenshots/1.png "screenshot")
 
 # What is PSCR?
 
-A web development framework written in object oriented PHP from scratch. It's designed to make your life easier and to make web development fun and easy. It features a flexible API for making web pages and designs on the fly. It adopts many design patterns from 
-other MVC Frameworks as well.
+PSCR stands for Prgoressive Solutions Content Renderer; A web development framework written in object oriented PHP. Mainly, this framework features my own content creation extension a native object oriented representation of the Document Object Model for creating web pages from scratch. 
 
-PSCR comes with a few default extensions to make creating web applications easy and intuitive. They are designed to make managing a common codebase for many different web applications while not hendering the ability to create unique functionality on a per 
-application basis.
-Features
+## Why create another web framework?
 
-    * Extensible classes (interfaces, abstracts)
-    * consistently namespaced hierarchy (namespaces are consistent with files/directories for easier auto-inclusion.)
-    * Easy to use global logging class (singleton)
+In 2007 it wasn't exactly a stereotype that I was aware of at least but it spoke to an idea of creating a web application development experience that 
+I could relate to for other's to enjoy. I was also relatively new to writing computer programs and wanted to hold myself to a high standard. In 2018, 
+I decided to revisit this project for a couple of days giving it a complete rewrite and applying at the time my most recent knowledge of knowledge 
+of object oriented design concepts with what is available in PHP.
 
-## Installation 
-- fork this reository
-- clone the fork 
-`cd pscr_base && composer install && sudo mkfifo pscr_log && chmod 777 pscr_log`
+## Installation (docker)
 
-### Nginx
-```
-server {
-    server_name your.server.name.com;
-    root <path/to/your/pscr_base>;
-    index index.php;
+- `docker build -t pscr:latest .`
+- `docker run -d --rm pscr`
+- Navigate a browser to the container's IP address to test if it works
 
-    location / {
-        try_files $uri /index.php?$query_string;
-    }
+## Installation (compose)
 
-    location ~ \.php$ {
-        # Test for non-existent scripts or throw a 404 error
-        # Without this line, nginx will blindly send any request ending in .php to php-fpm
-        include /etc/nginx/fastcgi.conf;
-        fastcgi_pass unix:/run/php-fpm.socket;
-    }
-}
-```
+- `compose install`
+- `php -S 0.0.0.0:80 index.php`
 
-## Making pages is easy with pscr_content
+## How to build a page
 
 ### create a class and extend pscr\extensions\pscr_content\model\pscr_content:
 
@@ -59,11 +43,11 @@ class index extends pscr_content {
     {
     }
 }
-```         
+```
 
 ### Use the HTML factory classes to generate the document:
+
 ```
-                      
 $head                     = $this->html->head();
 $head->title()->innerText = "Progressive Solutions Content Renderer";
 
@@ -79,7 +63,7 @@ $footer_bar       = $content_root_div->div('footer');
 
 ### you can stylize your page with CSS inline on the fly:
 
-```              
+```
 $header_bar_style                   = $header_bar->style();
 $header_bar_style->float            = "left";
 $header_bar_style->min_height       = "50px";
@@ -94,8 +78,8 @@ $header_bar_style->padding          = "20px";
 
 ### you can add style blocks using nowdoc:
 
-```                           
- $head->style_tag(<<< 'EOT'
+```
+$head->style_tag(<<< 'EOT'
         body {
             font-family: Verdana,sans-serif;
             font-size: 15px;
@@ -146,41 +130,3 @@ $header_bar_style->padding          = "20px";
  );
             
 ```
-
-For better examples have a look in the home app source in the tree.
-
-# Development
-start PSCR using the built-in webserver: 
-
-``
-php -S localhost:8000 $PROJECT_ROOT\index.php
-``
-
-## Roadmap
-Things I would like to see in an actual official release (if that ever happens)
-* An extension for session management that can integrate other extensions such as one for auth0
-* Super basic implementation of a Session Identity, one that doesn't depend on a database because I'm not adding an ORM to this.
-* implementation of management modules 
-* extensions as composer packages
-* PSCR itself as a composer package (pscr_content has a lot of includes, so presumably making a phar package would alleviate the include overhead. )
-* Better default router (make it easier to write expressions for rather than basic preg_match expressions)
-* Complete HTML element classes (there's quite a few)
-* Use html_tag constructor parameters more, but be consistent about it
-* Response validation based on request (Accept type is what we're responding with, ect.)
-* Log writer for writing to a UNIX socket or a named pipe 
- 
-### Reasons for not having an ORM and a CRUD-heavy implementation within the framework: 
-* It's hard to do right and even then it's never perfect
-* The more correct an ORM is the more complex it becomes and the more difficult it will likely become for newcomers to work with. 
-* ORMs are kind of esoteric, most NoSQL designs use JSON heavily which is easily serialized / deserialzed using their own native APIs
-* It's not uncommon or far fetched to spin up a specialized database for a particular project (docker makes easy work of that.)
-
-### Wishlist items
-
-I think it would be cool to have a shallow implementation of Javascript DOM classes/objects (PHP classes that resemble DOM classes and objects without implementations) that can be used to write code with as if they were going to be run in PHP but instead reflect that implementation as either PHP bytecode or pure javascript code and have it run on the client side. It would be really neat if that code could actually run in PHP too, but it would be an awful lot of work for something that provides little to no benefit at that point.
-
-On the other hand a PHP bytecode interpret itself could possibly be implemented in javascript using asm.js but the only way I have found that would allow reflection of bytecode requires a PECL module
-that is not part of the core framework (at least as of PHP7) called bcompiler. A PHP bytecode interpreter in JS  even with only minor completeness could prove use useful in pscr_content even just for basic things like binding events. 
-
-#### links
-http://php.net/manual/en/book.bcompiler.php 

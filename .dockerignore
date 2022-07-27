@@ -1,0 +1,9 @@
+composer.lock
+vendor
+README.md
+Dockerfile
+.git
+.gitignore
+.github
+.#*
+screenshots

@@ -1,8 +1,13 @@
 <?php
 
-define('PSCR_LIB_ROOT', './');
-
-define('PSCR_PROJECT_ROOT', './');
+if(array_key_exists('PSCR_LIB_ROOT', $_ENV))
+  define('PSCR_LIB_ROOT', $_ENV['PSCR_LIB_ROOT']);
+else
+  define('PSCR_LIB_ROOT', './');
+if(array_key_exists('PSCR_PROJECT_ROOT', $_ENV))
+   define('PSCR_PROJECT_ROOT', $_ENV['PSCR_PROJECT_ROOT']);
+else
+  define('PSCR_PROJECT_ROOT', './');
 
 require_once('vendor/autoload.php');
 
@@ -41,8 +46,10 @@ function http_request_handler() {
     }
 }
 
-\pscr\lib\logging\logger::_()->info("-----------------------------------------new request------------------------------------------", isset($_SERVER['REQUEST_URI']))
-    ? $_SERVER['REQUEST_URI']
+\pscr\lib\logging\logger::_()->info(
+  "-----------------------------------------new request------------------------------------------",
+  isset($_SERVER['REQUEST_URI']))
+  ? $_SERVER['REQUEST_URI']
     : $_SERVER['argv'];
 
 if (substr(php_sapi_name(), 0, 3) == 'cgi') {
@@ -62,7 +69,9 @@ else {
     \pscr\lib\logging\logger::_()->info("MAIN", "BUG: php_sapi_name unhandled or null");
 }
 
-\pscr\lib\logging\logger::_()->info("-----------------------------------------finished request------------------------------------------", isset($_SERVER['REQUEST_URI']))
-    ? $_SERVER['REQUEST_URI']
+\pscr\lib\logging\logger::_()->info(
+  "-----------------------------------------finished request------------------------------------------",
+  isset($_SERVER['REQUEST_URI']))
+  ? $_SERVER['REQUEST_URI']
     : $_SERVER['argv'];
 

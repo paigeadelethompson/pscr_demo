@@ -1,21 +1,21 @@
 {
-    "name": "netcrave/pscr_base",
+    "name": "paigeadelethompson/pscr_base",
     "type": "project",
     "require": {
-        "netcrave/pscr_core": "dev-master",
-        "netcrave/pscr_content": "dev-master",
-        "netcrave/pscr_rest_api": "dev-master",
-        "netcrave/pscr_static_loader": "dev-master",
-        "netcrave/pscr_home": "dev-master"
+        "paigeadelethompson/pscr_core": "dev-master",
+        "paigeadelethompson/pscr_content": "dev-master",
+        "paigeadelethompson/pscr_rest_api": "dev-master",
+        "paigeadelethompson/pscr_static_loader": "dev-master",
+        "paigeadelethompson/pscr_home": "dev-master"
     },
     "repositories": [
     {
         "type": "package",
         "package": {
-            "name": "netcrave/pscr_core",
+            "name": "paigeadelethompson/pscr_core",
             "version": "dev-master",
             "source": {
-                "url": "https://gitlab.com/netcrave/pscr_core.git",
+                "url": "https://github.com/paigeadelethompson/pscr_core.git",
                 "type": "git",
                 "reference": "master"
             },
@@ -29,10 +29,10 @@
     {
         "type": "package",
         "package": {
-            "name": "netcrave/pscr_content",
+            "name": "paigeadelethompson/pscr_content",
             "version": "dev-master",
             "source": {
-                "url": "https://gitlab.com/netcrave/pscr_content.git",
+                "url": "https://github.com/paigeadelethompson/pscr_content.git",
                 "type": "git",
                 "reference": "master"
             },
@@ -46,10 +46,10 @@
     {
         "type": "package",
         "package": {
-            "name": "netcrave/pscr_static_loader",
+            "name": "paigeadelethompson/pscr_static_loader",
             "version": "dev-master",
             "source": {
-                "url": "https://gitlab.com/netcrave/pscr_static_loader.git",
+                "url": "https://github.com/paigeadelethompson/pscr_static_loader.git",
                 "type": "git",
                 "reference": "master"
             },
@@ -63,10 +63,10 @@
     {
         "type": "package",
         "package": {
-            "name": "netcrave/pscr_rest_api",
+            "name": "paigeadelethompson/pscr_rest_api",
             "version": "dev-master",
             "source": {
-                "url": "https://gitlab.com/netcrave/pscr_rest_api.git",
+                "url": "https://github.com/paigeadelethompson/pscr_rest_api.git",
                 "type": "git",
                 "reference": "master"
             },
@@ -80,10 +80,10 @@
     {
         "type": "package",
         "package": {
-            "name": "netcrave/pscr_home",
+            "name": "paigeadelethompson/pscr_home",
             "version": "dev-master",
             "source": {
-                "url": "https://gitlab.com/netcrave/pscr_home.git",
+                "url": "https://github.com/paigeadelethompson/pscr_home.git",
                 "type": "git",
                 "reference": "master"
             },
