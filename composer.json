@@ -1,5 +1,5 @@
 {
-    "name": "paigeadelethompson/pscr_base",
+    "name": "paigeadelethompson/pscr_demo",
     "type": "project",
     "require": {
         "paigeadelethompson/pscr_core": "dev-master",
