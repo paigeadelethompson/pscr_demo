@@ -1,6 +1,3 @@
-[![Latest Stable Version](http://poser.pugx.org/phpunit/phpunit/v)](https://packagist.org/packages/phpunit/phpunit) [![Total Downloads](http://poser.pugx.org/phpunit/phpunit/downloads)](https://packagist.org/packages/phpunit/phpunit) [![Latest Unstable Version](http://poser.pugx.org/phpunit/phpunit/v/unstable)](https://packagist.org/packages/phpunit/phpunit) [![License](http://poser.pugx.org/phpunit/phpunit/license)](https://packagist.org/packages/phpunit/phpunit) [![PHP Version Require](http://poser.pugx.org/phpunit/phpunit/require/php)](https://packagist.org/packages/phpunit/phpunit)
-![screenshot](https://raw.githubusercontent.com/paigeadelethompson/pscr_demo/master/screenshots/1.png "screenshot")
-
 # What is PSCR?
 
 PSCR stands for Prgoressive Solutions Content Renderer; A web development framework written in object oriented PHP. Mainly, this framework features my own content creation extension a native object oriented representation of an HTML document for creating web pages from scratch. 
