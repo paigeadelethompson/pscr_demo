@@ -1,0 +1,22 @@
+name: Automatic update project documentation
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - 'v*'
+
+jobs:
+  update_wiki:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkouting project code...
+        uses: actions/checkout@v2
+      - name: Update wiki with PHP project documentation
+        uses: impresscms-dev/phpdocs-wiki-update-action@v2.2
+        with:
+          engine: clean/phpdoc-md
+          class_root_namespace: pscr\
+          include: |
+            pscr\**
