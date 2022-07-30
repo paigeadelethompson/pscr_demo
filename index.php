@@ -46,12 +46,6 @@ function http_request_handler() {
     }
 }
 
-\pscr\lib\logging\logger::_()->info(
-  "-----------------------------------------new request------------------------------------------",
-  isset($_SERVER['REQUEST_URI']))
-  ? $_SERVER['REQUEST_URI']
-    : $_SERVER['argv'];
-
 if (substr(php_sapi_name(), 0, 3) == 'cgi') {
     http_request_handler();
 }
@@ -68,10 +62,3 @@ else if (php_sapi_name() == "cli") {
 else {
     \pscr\lib\logging\logger::_()->info("MAIN", "BUG: php_sapi_name unhandled or null");
 }
-
-\pscr\lib\logging\logger::_()->info(
-  "-----------------------------------------finished request------------------------------------------",
-  isset($_SERVER['REQUEST_URI']))
-  ? $_SERVER['REQUEST_URI']
-    : $_SERVER['argv'];
-
