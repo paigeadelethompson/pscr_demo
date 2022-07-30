@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-nginx /app
+web: vendor/bin/heroku-php-nginx /pscr_demo/
