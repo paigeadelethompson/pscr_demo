@@ -20,3 +20,6 @@ jobs:
           class_root_namespace: pscr\
           include: |
             pscr\**
+          ignored_files: |
+            vendor/paigeadelethompson/pscr_home/apps/home/login.php
+
