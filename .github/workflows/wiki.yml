@@ -16,7 +16,7 @@ jobs:
       - name: Update wiki with PHP project documentation
         uses: impresscms-dev/phpdocs-wiki-update-action@v2.2
         with:
-          engine: clean/phpdoc-md
+          engine: evert/phpdoc-md
           class_root_namespace: pscr\
           include: |
             pscr\**
