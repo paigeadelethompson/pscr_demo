@@ -100,6 +100,8 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "7.3.0"
+    }
     "platform-dev": []
 }
