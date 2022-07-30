@@ -21,5 +21,7 @@ jobs:
           include: |
             pscr\**
           ignored_files: |
-            /home/runner/work/_temp/*/vendor/paigeadelethompson/pscr_home/apps/home/login.php
+            *login.php
+            *logout.php
+            *register.php
 
