@@ -1,0 +1,105 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "fef38973c2fa626b49565d254e11999b",
+    "content-hash": "eea93c283f192e191e5b3733a51ec53e",
+    "packages": [
+        {
+            "name": "paigeadelethompson/pscr_content",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paigeadelethompson/pscr_content.git",
+                "reference": "master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "pscr\\extensions\\pscr_content\\": "extensions/pscr_content/"
+                }
+            },
+            "time": "2018-11-24 23:53:20"
+        },
+        {
+            "name": "paigeadelethompson/pscr_core",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paigeadelethompson/pscr_core.git",
+                "reference": "master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "pscr\\lib\\": "lib/"
+                }
+            },
+            "time": "2022-07-27 05:15:31"
+        },
+        {
+            "name": "paigeadelethompson/pscr_home",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paigeadelethompson/pscr_home.git",
+                "reference": "master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "pscr\\apps\\home\\": "apps/home/"
+                }
+            },
+            "time": "2018-08-11 00:54:09"
+        },
+        {
+            "name": "paigeadelethompson/pscr_rest_api",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paigeadelethompson/pscr_rest_api.git",
+                "reference": "master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "pscr\\extensions\\pscr_rest_api\\": "extensions/pscr_rest_api/"
+                }
+            },
+            "time": "2018-08-10 23:45:02"
+        },
+        {
+            "name": "paigeadelethompson/pscr_static_loader",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paigeadelethompson/pscr_static_loader.git",
+                "reference": "master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "pscr\\extensions\\static_loader\\": "extensions/static_loader/"
+                }
+            },
+            "time": "2018-08-10 23:45:02"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "paigeadelethompson/pscr_core": 20,
+        "paigeadelethompson/pscr_content": 20,
+        "paigeadelethompson/pscr_rest_api": 20,
+        "paigeadelethompson/pscr_static_loader": 20,
+        "paigeadelethompson/pscr_home": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
