@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-nginx /
+web: /app/.heroku/php/bin/php -S 0.0.0.0:80 /app/index.php
