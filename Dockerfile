@@ -6,7 +6,7 @@ ENV PSCR_LIB_ROOT /pscr/
 
 ENV PSCR_PROJECT_ROOT /pscr/
 
-ENV COMPOSER_CACHE_DIR /tmp/composer_cache
+ENV COMPOSER_CACHE_DIR /tmp/
 
 EXPOSE 80
 
