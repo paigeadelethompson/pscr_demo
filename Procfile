@@ -1,1 +1,1 @@
-web: /app/.heroku/php/bin/composer serve-latest
+web: /app/.heroku/php/bin/composer serve-heroku

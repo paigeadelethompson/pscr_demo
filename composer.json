@@ -9,6 +9,7 @@
         "paigeadelethompson/pscr_home": "dev-master"
     },
     "scripts": {
+        "serve-heroku": "composer install && composer update && php -S 0.0.0.0:$PORT index.php",
         "serve-latest": "composer install && composer update && php -S $HOST:$PORT index.php",
         "serve": "php -S $HOST:$PORT index.php"
     },
