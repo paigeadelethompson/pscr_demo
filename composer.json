@@ -8,6 +8,10 @@
         "paigeadelethompson/pscr_static_loader": "dev-master",
         "paigeadelethompson/pscr_home": "dev-master"
     },
+    "scripts": {
+        "serve-latest": "composer install && composer update && php -S $HOST:$PORT index.php",
+        "serve": "php -S $HOST:$PORT index.php"
+    },
     "repositories": [
     {
         "type": "package",

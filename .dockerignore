@@ -9,3 +9,4 @@ Dockerfile
 screenshots
 .env
 Procfile
+.slugignore
