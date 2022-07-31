@@ -2,6 +2,7 @@
     "name": "paigeadelethompson/pscr_demo",
     "type": "project",
     "require": {
+        "php": "<=7.4",
         "paigeadelethompson/pscr_core": "dev-master",
         "paigeadelethompson/pscr_content": "dev-master",
         "paigeadelethompson/pscr_rest_api": "dev-master",
