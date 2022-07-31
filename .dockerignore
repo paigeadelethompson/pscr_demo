@@ -7,3 +7,5 @@ Dockerfile
 .github
 .#*
 screenshots
+.env
+Procfile
