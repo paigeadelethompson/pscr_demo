@@ -12,7 +12,7 @@ EXPOSE 80
 
 RUN apt -y update
 
-RUN apt -y install php7.0-cgi composer
+RUN apt -y install php7.0-cgi composer git
 
 ADD . /pscr
 
@@ -28,7 +28,7 @@ USER pscr
 
 RUN composer install
 
-RUN apt -y remove composer
+RUN apt -y remove composer git
 
 RUN apt -y autoremove
 
