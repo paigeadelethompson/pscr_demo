@@ -6,6 +6,8 @@ ENV PSCR_LIB_ROOT /pscr/
 
 ENV PSCR_PROJECT_ROOT /pscr/
 
+ENV COMPOSER_CACHE_DIR /tmp/
+
 EXPOSE 80
 
 RUN apt -y update
@@ -25,6 +27,10 @@ RUN chown -R pscr:pscr /pscr
 USER pscr
 
 RUN composer install
+
+RUN apt -y remove composer
+
+RUN apt -y autoremove
 
 VOLUME /pscr/settings
 
