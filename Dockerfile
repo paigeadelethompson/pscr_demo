@@ -18,15 +18,13 @@ EXPOSE 80
 
 RUN apt -y update
 
-RUN apt -y install php7.4-cgi git 
+RUN apt -y install php7.4-cgi git curl
 
 WORKDIR /tmp
 
-ADD https://getcomposer.org/installer /tmp/installer
+RUN curl -sS https://getcomposer.org/installer -o /tmp/installer.php
 
-RUN php /tmp/installer
-
-RUN mv /tmp/composer.phar /usr/bin/composer 
+RUN php /tmp/installer.php --install-dir=/usr/bin --filename=composer
 
 RUN chmod +x /usr/bin/composer
 
