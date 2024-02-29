@@ -18,7 +18,7 @@ EXPOSE 80
 
 RUN apt -y update
 
-RUN apt -y install php7.4-cgi git curl
+RUN apt -y install php git curl
 
 WORKDIR /tmp
 
