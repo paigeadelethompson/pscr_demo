@@ -1,3 +1,7 @@
+# Shelving this for the forseeable future
+- Nobody cares
+- PHP is an inferior choice for any kind of development nowdays 
+
 # What is PSCR?
 
 PSCR stands for Prgoressive Solutions Content Renderer; A web development framework written in object oriented PHP. Mainly, this framework features my own content creation extension a native object oriented representation of an HTML document for creating web pages from scratch. 
